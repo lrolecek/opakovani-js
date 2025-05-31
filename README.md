@@ -217,7 +217,7 @@ Na odpověď serveru i data chceme počkat pomocí příkazu `await`, ale ten fu
 ```js
 const getData = async () => {
   const response = await fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita');
-  const jsonData = response.json();
+  const jsonData = await response.json();
 
   console.log(jsonData);
   console.log(jsonData[0].strDrink);
